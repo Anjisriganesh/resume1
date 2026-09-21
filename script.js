@@ -1,7 +1,12 @@
 function show(id){
-    let sections=document.getElementsByClassName("details")
-    for(let i=0;i<sections.length;i++){
-        sections[i].style.display="none";
+    let section=document.getElementById(id)
+    if(section.style.display==="block"){
+        section.style.display="none";
+    }else{
+        let sections=document.getElementsByClassName('details')
+        for(let i=0;i<sections.length;i++){
+            sections[i].style.display="none";
+        }
+        section.style.display="block";
     }
-    document.getElementById(id).style.display="block";
 }
